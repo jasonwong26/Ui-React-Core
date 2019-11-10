@@ -1,0 +1,36 @@
+{
+  "name": "ui-react-core",
+  "version": "1.0.0",
+  "description": "A collection of reusable UI servies and components for React projects",
+  "main": "index.ts",
+  "scripts": {
+    "test": "react-scripts test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonwong26/Ui-React-Core.git"
+  },
+  "keywords": [
+    "Developer Mouse",
+    "React",
+    "Typescript"
+  ],
+  "author": "Jason Wong",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jasonwong26/Ui-React-Core/issues"
+  },
+  "homepage": "https://github.com/jasonwong26/Ui-React-Core#readme",
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.14",
+    "@types/node": "^10.14.10",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.6",
+    "typescript": "^3.5.2"
+  }
+}
