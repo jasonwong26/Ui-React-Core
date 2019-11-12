@@ -23,7 +23,7 @@
   "scripts": {
     "lint": "tslint 'src/**/*.ts?(x)' || exit 0",
     "lint:fix": "tslint 'src/**/*.ts?(x)' --fix",
-    "test": "jest",
+    "test": "jest --config jestconfig.json",
     "test:watch": "jest --watch",
     "prebuild": "rm -rf lib/",
     "build": "tsc",

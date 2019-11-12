@@ -26,11 +26,11 @@ describe("<TextInput />", () => {
   });
 
   it("it should trigger onChange function appropriately", () => {
-      const event = {
-        target: { value: "example value" }
-      };
-      wrapper.find("input").simulate("change", event);
+    const event = {
+      target: { value: "example value" }
+    };
+    wrapper.find("input").simulate("change", event);
 
-      expect(onChangeMock.mock.calls.length).toBe(1);
-    });    
+    expect(onChangeMock.mock.calls.length).toBe(1);
+  });
 });
