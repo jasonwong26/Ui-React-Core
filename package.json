@@ -1,10 +1,10 @@
 {
   "name": "@developermouse/ui-react-core",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A collection of reusable UI servies and components for React projects",
-  "main": ".lib/index.js",
-  "types": ".lib/index.d.ts",
-  "files": [".lib/**/*"],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jasonwong26/Ui-React-Core.git"
