@@ -3,3 +3,6 @@
 
 # dependencies
 node_modules/
+
+# test snapshots
+src/**/__snapshots__

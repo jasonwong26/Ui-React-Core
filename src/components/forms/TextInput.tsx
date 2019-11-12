@@ -1,6 +1,6 @@
 import * as React from "react";
 
-interface Props {
+export interface Props {
   name: string,
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void,
   onKeyPress?: (event: React.KeyboardEvent) => void,

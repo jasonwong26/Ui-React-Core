@@ -1,11 +1,10 @@
 {
-  "name": "ui-react-core",
+  "name": "@developermouse/ui-react-core",
   "version": "1.0.0",
   "description": "A collection of reusable UI servies and components for React projects",
-  "main": "index.ts",
-  "scripts": {
-    "test": "react-scripts test"
-  },
+  "main": ".lib/index.js",
+  "types": ".lib/index.d.ts",
+  "files": [".lib/**/*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jasonwong26/Ui-React-Core.git"
@@ -21,16 +20,37 @@
     "url": "https://github.com/jasonwong26/Ui-React-Core/issues"
   },
   "homepage": "https://github.com/jasonwong26/Ui-React-Core#readme",
+  "scripts": {
+    "lint": "tslint 'src/**/*.ts?(x)' || exit 0",
+    "lint:fix": "tslint 'src/**/*.ts?(x)' --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prebuild": "rm -rf lib/",
+    "build": "tsc",
+    "prepare" : "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^23.3.14",
     "@types/node": "^10.14.10",
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.6",
-    "typescript": "^3.5.2"
+    "@types/react-test-renderer": "^16.9.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.11.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.7.2"
   }
 }
