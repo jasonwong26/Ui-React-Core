@@ -1,6 +1,6 @@
 {
   "name": "@developermouse/ui-react-core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A collection of reusable UI servies and components for React projects",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
