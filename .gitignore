@@ -1,11 +1,11 @@
 # environment
-.vscode/
+/.vscode
 
 # dependencies
-node_modules/
+/node_modules
 
 # production
-lib/
+/lib
 
 # test snapshots
-src/**/__snapshots__
+/src/**/__snapshots__
