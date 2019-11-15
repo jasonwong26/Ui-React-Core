@@ -6,7 +6,7 @@ interface DataTableProps {
   widths?: string[]
 }
 
-const DataTable: React.SFC<DataTableProps> = ({ children, widths, columns }) => (
+export const DataTable: React.SFC<DataTableProps> = ({ children, widths, columns }) => (
   <Table striped bordered>
     <thead>
       <tr>
@@ -20,5 +20,3 @@ const DataTable: React.SFC<DataTableProps> = ({ children, widths, columns }) => 
     <tbody>{children}</tbody>
   </Table>
 );
-
-export default DataTable;
