@@ -5,7 +5,7 @@ interface LoadingBarProps {
   loading: boolean
 }
 
-const LoadingBar: React.SFC<LoadingBarProps> = ({ loading }) => (
+export const LoadingBar: React.SFC<LoadingBarProps> = ({ loading }) => (
   <React.Fragment>
     {loading && (
       <React.Fragment>
@@ -15,5 +15,3 @@ const LoadingBar: React.SFC<LoadingBarProps> = ({ loading }) => (
     )}
   </React.Fragment>
 );
-
-export default LoadingBar;
