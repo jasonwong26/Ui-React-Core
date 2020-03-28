@@ -11,10 +11,15 @@ export enum AlertType {
   Success = "success",
   Warning = "warning",
   Danger = "danger",
-  Info = "info"
+  Info = "info",
+
+  Primary = "primary",
+  Secondary = "secondary",
+  Light = "light",
+  Dark = "dark"
 }
 export const Alert: React.FC<Props> = ({type, children}) => {
   return (
-    <AlertImpl bsStyle={type}>{children}</AlertImpl>
+    <AlertImpl variant={type}>{children}</AlertImpl>
   );
 };

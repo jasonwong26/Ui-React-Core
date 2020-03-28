@@ -16,17 +16,20 @@ export enum ButtonType {
   Warning = "warning",
   Danger = "danger",
   Info = "info",
-  Link = "link"
+  Link = "link",
+
+  Secondary = "secondary",
+  Light = "light",
+  Dark = "dark"
 }
 
 export enum ButtonSize {
-  Large = "large",
-  Small = "small",
-  Xsmall = "xsmall"
+  Large = "lg",
+  Small = "sm"
 }
 
 export const Button: React.FC<Props> = ({type, size, onClick, disabled, children}) => {
   return (
-    <ButtonImpl bsStyle={type} bsSize={size} onClick={onClick} disabled={disabled}>{children}</ButtonImpl>
+    <ButtonImpl variant={type} size={size} onClick={onClick} disabled={disabled}>{children}</ButtonImpl>
   );
 };

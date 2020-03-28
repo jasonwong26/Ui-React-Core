@@ -1,15 +1,26 @@
 import * as React from "react";
 import * as Bootstrap from "react-bootstrap";
 
-const { ListGroup: ListGroupImpl, ListGroupItem: ListGroupItemImpl } = Bootstrap;
+const { ListGroup: ListGroupImpl } = Bootstrap;
 
 interface GroupProps {
   children: React.ReactNode
 }
 interface GroupItemProps {
-  header?: React.ReactNode,
-  onClick?: () => void,
-  children: React.ReactNode
+  children: React.ReactNode,
+  type?: ListGroupItemType,
+  onClick?: () => void
+}
+export enum ListGroupItemType {
+  Success = "success",
+  Warning = "warning",
+  Danger = "danger",
+  Info = "info",
+
+  Primary = "primary",
+  Secondary = "secondary",
+  Light = "light",
+  Dark = "dark"
 }
 
 export const ListGroup: React.FC<GroupProps> = ({children}) => {
@@ -18,10 +29,10 @@ export const ListGroup: React.FC<GroupProps> = ({children}) => {
   );
 };
 
-export const ListGroupItem: React.FC<GroupItemProps> = ({header, onClick, children}) => {
+export const ListGroupItem: React.FC<GroupItemProps> = ({children, type, onClick}) => {
   return (
-    <ListGroupItemImpl header={header} onClick={onClick}>
+    <ListGroupImpl.Item variant={type} onClick={onClick}>
       {children}
-    </ListGroupItemImpl>
+    </ListGroupImpl.Item>
   );
 };

@@ -1,7 +1,5 @@
 import * as React from "react";
-import * as Bootstrap from "react-bootstrap";
-
-const { Panel: PanelImpl } = Bootstrap;
+import { Card } from "react-bootstrap";
 
 interface Props {
   title?: React.ReactNode,
@@ -10,9 +8,9 @@ interface Props {
 
 export const Panel: React.FC<Props> = ({title, children}) => {
   return (
-    <PanelImpl>
-      {!!title && (<PanelImpl.Heading>{title}</PanelImpl.Heading>)}
-      <PanelImpl.Body>{children}</PanelImpl.Body>
-    </PanelImpl>
+    <Card>
+      {!!title && (<Card.Title>{title}</Card.Title>)}
+      <Card.Body>{children}</Card.Body>
+    </Card>
   );
 };
